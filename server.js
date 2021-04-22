@@ -31,6 +31,6 @@ mongoose
   })
   .then(() => {
     console.log("mongoDB connected");
-    return server.listen({ port: 5000 });
+    return server.listen({ port: 5000 || process.env.PORT});
   })
   .then((res) => console.log(`Server listen at ${res.url}`));
